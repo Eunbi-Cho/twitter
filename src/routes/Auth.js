@@ -1,14 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
+import AuthForm from "../components/AuthForm";
+import { authService, firebaseInstance } from "../fbase";
 
-const Auth= () => <div>
-    <form>
-        <input type="text" placeholder="Email" required />
-        <input type="password" placeholder="Password" required />
-        <input type="submit" placeholder="Log In" required />
-    </form>
-    <div>
-        <button>Continue with Google</button>
-        <button>Continue with Github</button>
-    </div>
-</div>
+const Auth= () => {
+    const onSocialClick = async (event) => {
+        const {
+            target: { name },
+        } = event;
+        let provider;
+        if(name === "google") {
+            provider = new firebaseInstance.auth.GoogleAuthProvider();
+        }else if(name === "github") {
+            provider = new firebaseInstance.auth.GithubAuthProvider();
+        }
+        await authService.signInWithPopup(provider);
+    };
+    return(
+        <div>
+            <AuthForm />
+            <div>
+                <button onClick={onSocialClick} name="google">Continue with Google</button>
+                <button onClick={onSocialClick} name="github">Continue with Github</button>
+            </div>
+        </div>
+    );
+    };
+
 export default Auth;
