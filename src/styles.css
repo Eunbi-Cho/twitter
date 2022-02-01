@@ -39,7 +39,7 @@ form {
 
 .container {
   width: 100%;
-  max-width: 320px;
+  max-width: 340px;
   display: flex;
   flex-direction: column;
 }
@@ -57,7 +57,7 @@ form {
 .formBtn {
   cursor: pointer;
   width: 100%;
-  padding: 7px 20px;
+  padding: 10px 20px;
   text-align: center;
   color: white;
   border-radius: 20px;
@@ -73,7 +73,7 @@ form {
 /* Profile Page */
 
 .profileForm {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+  border-bottom: 0.1px solid rgba(99, 99, 99, 0.9);
   padding-bottom: 30px;
   width: 100%;
   display: flex;
@@ -122,9 +122,11 @@ form {
   width: 40px;
   padding: 10px 0px;
   text-align: center;
+  font-size: small;
   border-radius: 20px;
   color: white;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 .factoryInput__label {
@@ -169,7 +171,8 @@ form {
 }
 
 .nweet {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+  height: 80px;
   background-color: white;
   width: 100%;
   max-width: 320px;
@@ -183,16 +186,17 @@ form {
 
 .nweet h4 {
   font-size: 14px;
+  font-weight: 600;
 }
 
 .nweet img {
   right: -10px;
-  top: 20px;
+  top: 8px;
   position: absolute;
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .nweet__actions {
@@ -223,19 +227,20 @@ form {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 320px;
+  max-width: 340px;
 }
 
 .authBtn {
   cursor: pointer;
   border-radius: 20px;
   border: none;
-  padding: 10px 0px;
+  padding: 10px 5px 10px 5px;
   font-size: 12px;
+  font-weight: 100;
   text-align: center;
-  width: 150px;
-  background: white;
-  cursor: pointer;
+  width: 160px;
+  background: rgb(39, 39, 39);
+  color: white;
 }
 
 /* AuthForm */
@@ -243,10 +248,10 @@ form {
 .authInput {
   max-width: 320px;
   width: 100%;
-  padding: 10px;
+  padding: 14px;
   border-radius: 30px;
   background-color: rgba(255, 255, 255, 1);
-  margin-bottom: 10px;
+  margin-bottom: 14px;
   font-size: 12px;
   color: black;
   box-sizing: content-box;
@@ -256,6 +261,8 @@ form {
   text-align: center;
   background: #04aaff;
   color: white;
+  font-size: 16px;
+  font-weight: 600;
   margin-top: 10px;
   box-sizing: content-box;
   cursor: pointer;
@@ -276,4 +283,10 @@ form {
   display: block;
   font-size: 12px;
   text-decoration: underline;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
