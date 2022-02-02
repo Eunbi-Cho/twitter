@@ -65,7 +65,7 @@ const TweetFactory = ({ userObj }) => {
           placeholder="What's on your mind?"
           maxLength={120}
         />
-        <input type="submit" vlaue="→" className="factoryInput__arrow" />
+        <input type="submit" value="GO" className="factoryInput__arrow" />
       </div>
       <label for="attach-file" className="factoryInput__label">
         <span>Add photos</span>
